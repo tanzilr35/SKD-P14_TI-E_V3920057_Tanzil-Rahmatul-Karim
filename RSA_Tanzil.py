@@ -13,10 +13,10 @@ publickey = key.publickey() #ekspor kunci publik untuk di-exchange
 encryptor = PKCS1_OAEP.new(publickey) #gunakan instansi PKCS1_OAEP
 encrypted = encryptor.encrypt(b'Tanzil Rahmatul Karim') #pesan untuk enkripsi
 
-print('Hasil Enkripsi:', encrypted) #ciphertext
+print('Hasil Enkripsi:', encrypted)
 
 # Menambahkan teks pada file .txt
-f = open ('enkripsi-new.txt', 'a') 
+f = open ('enkripsi-new.txt', 'a') #append file
 f.write('File telah memiliki content!') #tulis ciphertext ke file
 f.close()
 
